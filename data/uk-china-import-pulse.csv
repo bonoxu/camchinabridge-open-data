@@ -1,0 +1,63 @@
+# UK-China Import Pulse, Q2 2026 compared with Q2 2025. Source: https://camchinabridge.co.uk/uk-china-import-pulse/
+# Cite as: Cambridge China Bridge, UK-China Import Pulse, with a link to the page above.
+# Contains HMRC overseas trade statistics (UK imports from China), Open Government Licence v3.0.
+section,code,description,period,value_gbp,previous_period,previous_value_gbp,change_pct,gbp_per_kg
+total,,All UK imports from China,Q2 2026,16189294555,Q2 2025,14331531522,13,
+largest chapter (HS2),85,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers, television image and sound recorders and reproducers, and parts and accessories of such articles",Q2 2026,3570754255,Q2 2025,3420083983,4.4,14.01
+largest chapter (HS2),84,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",Q2 2026,2892691486,Q2 2025,2683284387,7.8,8.98
+largest chapter (HS2),87,"Vehicles other than railway or tramway rolling-stock, and parts and accessories thereof",Q2 2026,2129513329,Q2 2025,1297663558,64.1,7.53
+largest chapter (HS2),94,"Furniture; medical and surgical furniture; bedding, mattresses, mattress supports,cushions and similar stuffed furnishings; lamps and lighting fittings, not elsewhere specified; illuminated signs, illuminated name-plates and the like; prefabricated b",Q2 2026,1053885151,Q2 2025,1018319200,3.5,2.95
+largest chapter (HS2),73,Articles of iron or steel,Q2 2026,670409778,Q2 2025,428202162,56.6,2.45
+largest chapter (HS2),39,Plastics and plastic products,Q2 2026,515310616,Q2 2025,478493056,7.7,2.3
+largest chapter (HS2),95,"Toys, games and sports requisites; parts and accessories thereof",Q2 2026,491364321,Q2 2025,576914534,-14.8,4.76
+largest chapter (HS2),90,"Optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments and apparatus; parts and accessories thereof",Q2 2026,356142114,Q2 2025,340600914,4.6,21.03
+largest chapter (HS2),61,"Articles of apparel and clothing accessories, knitted or crocheted",Q2 2026,290707373,Q2 2025,285789179,1.7,15.47
+largest chapter (HS2),29,Organic chemicals,Q2 2026,262341706,Q2 2025,213914903,22.6,2.72
+largest chapter (HS2),62,"Articles of apparel and clothing accessories, not knitted or crocheted",Q2 2026,261079548,Q2 2025,279832853,-6.7,19.97
+largest chapter (HS2),40,Rubber and articles thereof,Q2 2026,241630768,Q2 2025,200266731,20.7,2.29
+fastest-rising heading (HS4),7308,"Structures and parts of structures ""e.g., bridges and bridge-sections, lock-gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balustrades, pillars and columns"", of iron or",Q2 2026,287756587,Q2 2025,72530764,296.7,2.79
+fastest-rising heading (HS4),8412,"Engines and motors (excl. steam turbines, internal combustion piston engine, hydraulic turbines, water wheels, gas turbines and electric motors); parts thereof",Q2 2026,36156402,Q2 2025,12720767,184.2,10.56
+fastest-rising heading (HS4),8415,"Air conditioning machines comprising a motor-driven fan and elements for changing the temperature and humidity, incl. those machines in which the humidity cannot be separately regulated; parts thereof",Q2 2026,51387495,Q2 2025,24556787,109.3,5.49
+fastest-rising heading (HS4),8703,"Motor cars and other motor vehicles principally designed for the transport of <10 persons, incl. station wagons and racing cars (excl. motor vehicles of heading 8702)",Q2 2026,1748628894,Q2 2025,909396959,92.3,9.05
+fastest-rising heading (HS4),8711,"Motorcycles, incl. mopeds, and cycles fitted with an auxiliary motor, with or without side-cars; side-cars",Q2 2026,44559064,Q2 2025,25208174,76.8,7.75
+fastest-rising heading (HS4),4803,"Toilet or facial tissue stock, towel or napkin stock and similar paper for household or sanitary purposes, cellulose wadding and webs of cellulose fibres, whether or not creped, crinkled, embossed, perforated, surface-coloured, surface-decorated or p",Q2 2026,18654941,Q2 2025,10811610,72.5,0.87
+fastest-rising heading (HS4),3824,"Prepared binders for foundry moulds or cores; chemical products and preparations for the chemical or allied industries, incl. mixtures of natural products, n.e.s.",Q2 2026,18188320,Q2 2025,10628876,71.1,2.3
+fastest-rising heading (HS4),1602,"Prepared or preserved meat, meat offal, blood or insects (excl. sausages and similar products, and meat extracts and juices)",Q2 2026,54264977,Q2 2025,33018403,64.3,2.83
+steepest-falling heading (HS4),8702,"Motor vehicles for the transport of >= 10 persons, incl. driver",Q2 2026,11750723,Q2 2025,65651299,-82.1,13.45
+steepest-falling heading (HS4),9504,"Video game consoles and machines, table or parlour games, incl. pintables, billiards, special tables for casino games and automatic bowling equipment, amusement machines operated by coins, banknotes, bank cards, tokens or by any other means of paymen",Q2 2026,82602037,Q2 2025,198545668,-58.4,11.62
+steepest-falling heading (HS4),9030,"Oscilloscopes, spectrum analysers and other instruments and apparatus for measuring or checking electrical quantities (excl. meters of heading 9028); instruments and apparatus for measuring or detecting alpha, beta, gamma, X-ray, cosmic or other ioni",Q2 2026,11570044,Q2 2025,24019809,-51.8,34.4
+steepest-falling heading (HS4),6210,"Garments made up of felt or nonwovens, whether or not impregnated, coated, covered or laminated; garments of textile fabrics, rubberised or impregnated, coated, covered or laminated with plastics or other substances (excl. knitted or crocheted, and b",Q2 2026,10996776,Q2 2025,22133546,-50.3,8.65
+steepest-falling heading (HS4),9402,"Medical, surgical, dental or veterinary furniture, e.g. operating tables, examination tables, hospital beds with mechanical fittings and dentists' chairs; barbers' chairs and similar chairs having rotating as well as both reclining and elevating move",Q2 2026,10115062,Q2 2025,14811266,-31.7,4.95
+steepest-falling heading (HS4),8409,Parts suitable for use solely or principally with internal combustion piston engine of heading 8407 or 8408,Q2 2026,48081994,Q2 2025,68035436,-29.3,7.19
+steepest-falling heading (HS4),8433,"Harvesting or threshing machinery, incl. straw or fodder balers; grass or hay mowers; machines for cleaning, sorting or grading eggs, fruit or other agricultural produce; parts thereof (other than machines for cleaning, sorting or grading seed, grain",Q2 2026,52255197,Q2 2025,70973713,-26.4,5.64
+steepest-falling heading (HS4),8423,"Weighing machinery, incl. weight-operated counting or checking machines (excl. balances of a sensitivity of 5 cg or better); weighing machine weights of all kinds; parts thereof",Q2 2026,10418759,Q2 2025,14106059,-26.1,6.59
+quarterly total,,All UK imports from China,Q1 2019,11383912857,,,,
+quarterly total,,All UK imports from China,Q2 2019,10386646507,,,,
+quarterly total,,All UK imports from China,Q3 2019,12040002441,,,,
+quarterly total,,All UK imports from China,Q4 2019,12348296226,,,,
+quarterly total,,All UK imports from China,Q1 2020,9329766157,,,,
+quarterly total,,All UK imports from China,Q2 2020,10915277624,,,,
+quarterly total,,All UK imports from China,Q3 2020,14984708559,,,,
+quarterly total,,All UK imports from China,Q4 2020,18010614196,,,,
+quarterly total,,All UK imports from China,Q1 2021,15163493952,,,,
+quarterly total,,All UK imports from China,Q2 2021,14216485900,,,,
+quarterly total,,All UK imports from China,Q3 2021,16039535467,,,,
+quarterly total,,All UK imports from China,Q4 2021,17670520883,,,,
+quarterly total,,All UK imports from China,Q1 2022,17688583438,,,,
+quarterly total,,All UK imports from China,Q2 2022,15261570498,,,,
+quarterly total,,All UK imports from China,Q3 2022,17556076387,,,,
+quarterly total,,All UK imports from China,Q4 2022,18360105848,,,,
+quarterly total,,All UK imports from China,Q1 2023,15114664847,,,,
+quarterly total,,All UK imports from China,Q2 2023,14979210125,,,,
+quarterly total,,All UK imports from China,Q3 2023,15453834424,,,,
+quarterly total,,All UK imports from China,Q4 2023,16533878222,,,,
+quarterly total,,All UK imports from China,Q1 2024,13925046457,,,,
+quarterly total,,All UK imports from China,Q2 2024,14697929004,,,,
+quarterly total,,All UK imports from China,Q3 2024,15937635672,,,,
+quarterly total,,All UK imports from China,Q4 2024,17375574506,,,,
+quarterly total,,All UK imports from China,Q1 2025,15410877277,,,,
+quarterly total,,All UK imports from China,Q2 2025,14331531522,,,,
+quarterly total,,All UK imports from China,Q3 2025,15698856743,,,,
+quarterly total,,All UK imports from China,Q4 2025,17017551982,,,,
+quarterly total,,All UK imports from China,Q1 2026,16667538437,,,,
+quarterly total,,All UK imports from China,Q2 2026,16189294555,,,,

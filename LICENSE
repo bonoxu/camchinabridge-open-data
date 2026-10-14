@@ -1,0 +1,68 @@
+Cambridge China Bridge open data: licence terms
+================================================
+
+This repository contains material under three different positions. Please read
+which applies to what you reuse.
+
+1. Our compilation: Creative Commons Attribution 4.0 International (CC BY 4.0)
+-------------------------------------------------------------------------------
+
+Copyright (c) 2026 Piggy Pineapple Ltd, trading as Cambridge China Bridge.
+
+The following are licensed under CC BY 4.0
+(https://creativecommons.org/licenses/by/4.0/legalcode):
+
+  - the selection, arrangement and structure of the datasets (which figures are
+    included, the section and field design, the schema and descriptions in
+    datapackage.json);
+  - the English and Chinese names and labels we wrote;
+  - the estimate rows in data/china-holidays-factory-closures.csv
+    (entry_type factory_rush_estimate and factory_closure_estimate);
+  - the documentation (README.md, this file, CITATION.cff) and any scripts.
+
+Attribution: "Cambridge China Bridge", with a link to
+https://camchinabridge.co.uk/uk-china-import-pulse/ or
+https://camchinabridge.co.uk/tools/china-holiday-calendar/ as relevant.
+
+This licence covers only rights Piggy Pineapple Ltd holds. It does not
+relicense the third-party material in sections 2 and 3.
+
+2. HMRC figures: Crown copyright, Open Government Licence v3.0
+--------------------------------------------------------------
+
+The trade values, masses and commodity descriptions in
+data/uk-china-import-pulse.csv, and the figures we derived from them (totals,
+percentage changes, GBP per kg), come from HM Revenue & Customs Overseas Trade
+Statistics (https://www.uktradeinfo.com/). They are Crown copyright and are
+used and may be reused under the Open Government Licence v3.0:
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+Anyone reusing them must keep this attribution:
+
+    Contains HMRC data © Crown copyright 2026, licensed under the Open
+    Government Licence v3.0.
+
+As the OGL requires, reuse must not suggest that HMRC or the Crown endorses
+Cambridge China Bridge, you, or your use of the information. The OGL does not
+grant rights in HMRC's logos or other marks.
+
+3. Official Chinese holiday dates: public facts
+-----------------------------------------------
+
+The holiday periods and make-up working days with status "official" or
+"provisional_statutory" are facts published by the State Council of the
+People's Republic of China (notice 国办发明电〔2025〕7号 and the national
+holiday regulations 全国年节及纪念日放假办法). We claim no rights in those
+dates or in the government documents; we link to them as sources. Chinese
+copyright law (Article 5 of the Copyright Law of the PRC) excludes official
+documents of state organs from copyright protection.
+
+No warranty
+-----------
+
+The data are provided "as is", without warranty of any kind. HMRC revises
+recent figures, and Chinese holiday arrangements are confirmed only by each
+year's notice. Check the official sources before relying on a figure or a
+date for a contract, a quotation or a shipment. Piggy Pineapple Ltd is not
+liable for any loss arising from use of the data, to the extent the law
+allows.

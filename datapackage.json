@@ -1,0 +1,141 @@
+{
+  "profile": "data-package",
+  "name": "camchinabridge-open-data",
+  "title": "Cambridge China Bridge open data: UK-China Import Pulse and China holiday and factory-closure calendar",
+  "description": "Two small datasets published by Cambridge China Bridge for UK importers and researchers: a quarterly summary of UK imports from China derived from HMRC overseas trade statistics, and China's public holidays, make-up working days and estimated Chinese New Year factory closures taken from State Council notices.",
+  "version": "2026.10",
+  "created": "2026-10-14T00:00:00Z",
+  "homepage": "https://camchinabridge.co.uk/uk-china-import-pulse/",
+  "keywords": ["UK imports", "China", "HMRC", "overseas trade statistics", "Chinese public holidays", "Chinese New Year", "factory closures", "sourcing"],
+  "contributors": [
+    {
+      "title": "Cambridge China Bridge (Piggy Pineapple Ltd)",
+      "path": "https://camchinabridge.co.uk/",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International (applies to the Cambridge China Bridge compilation, selection, field design and estimates)",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "name": "OGL-UK-3.0",
+      "title": "Open Government Licence v3.0 (applies to the HMRC-derived figures, Crown copyright)",
+      "path": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "HM Revenue & Customs, Overseas Trade Statistics (OTS), via the uktradeinfo API (api.uktradeinfo.com/OTS): UK imports from China (CountryId 720, non-EU imports)",
+      "path": "https://www.uktradeinfo.com/"
+    },
+    {
+      "title": "国务院办公厅关于2026年部分节假日安排的通知（国办发明电〔2025〕7号）, State Council General Office, 4 November 2025",
+      "path": "https://www.gov.cn/zhengce/content/202511/content_7047090.htm"
+    },
+    {
+      "title": "国务院关于修改《全国年节及纪念日放假办法》的决定, State Council, in force 1 January 2025",
+      "path": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "uk-china-import-pulse",
+      "title": "UK-China Import Pulse",
+      "description": "UK imports from China for the latest calendar quarter HMRC has fully published, compared with the same quarter a year earlier: the headline total, the 12 largest HS2 chapters, the 8 fastest-rising and 8 steepest-falling HS4 headings (headings under GBP 10m in both quarters are left out), and quarterly totals from Q1 2019. Chapter 99 and unclassified lines are excluded from totals. Values are current-price pounds sterling as published by HMRC and may be revised. The file begins with three '#' comment lines carrying the source, citation and OGL attribution; it is byte-identical to https://camchinabridge.co.uk/uk-china-import-pulse.csv.",
+      "path": "data/uk-china-import-pulse.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": { "delimiter": ",", "quoteChar": "\"", "doubleQuote": true, "header": true, "commentChar": "#", "lineTerminator": "\n" },
+      "licenses": [
+        {
+          "name": "OGL-UK-3.0",
+          "title": "Open Government Licence v3.0. Contains HMRC data © Crown copyright.",
+          "path": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+        }
+      ],
+      "sources": [
+        { "title": "HM Revenue & Customs, Overseas Trade Statistics (uktradeinfo)", "path": "https://www.uktradeinfo.com/" }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Which part of the Pulse the row belongs to.",
+            "constraints": {
+              "required": true,
+              "enum": ["total", "largest chapter (HS2)", "fastest-rising heading (HS4)", "steepest-falling heading (HS4)", "quarterly total"]
+            }
+          },
+          { "name": "code", "type": "string", "description": "HS2 chapter or HS4 heading code, kept as text so leading zeros survive. Empty for total rows." },
+          { "name": "description", "type": "string", "description": "HMRC commodity description of the chapter or heading, or 'All UK imports from China'.", "constraints": { "required": true } },
+          { "name": "period", "type": "string", "description": "Calendar quarter the value covers, written 'Qn YYYY'.", "constraints": { "required": true, "pattern": "Q[1-4] \\d{4}" } },
+          { "name": "value_gbp", "type": "integer", "description": "Value of UK imports from China in the period, pounds sterling (GBP), current prices.", "constraints": { "required": true } },
+          { "name": "previous_period", "type": "string", "description": "Comparison quarter (same quarter a year earlier). Empty for quarterly total rows." },
+          { "name": "previous_value_gbp", "type": "integer", "description": "Value in the comparison quarter, GBP. Empty for quarterly total rows." },
+          { "name": "change_pct", "type": "number", "description": "Percentage change from previous_value_gbp to value_gbp (rounded by the source script). Empty for quarterly total rows." },
+          { "name": "gbp_per_kg", "type": "number", "description": "Value density: value_gbp divided by net mass in kg for the period, GBP per kg. Empty where not computed (totals, or where HMRC gives no mass)." }
+        ]
+      }
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "china-holidays-factory-closures",
+      "title": "China public holidays, make-up working days and factory-closure estimates",
+      "description": "Mainland China public holiday periods and make-up working days for 2026 from the State Council General Office notice; provisional 2027 statutory days from the national holiday regulations (only dates fixed by the regulations; Qingming, Dragon Boat and Mid-Autumn 2027 are omitted until the 2027 notice is published); and Cambridge China Bridge's own estimates of the Chinese New Year 2027 factory rush and closure. Same dates as https://camchinabridge.co.uk/china-holidays.ics, excluding Canton Fair events.",
+      "path": "data/china-holidays-factory-closures.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": { "delimiter": ",", "quoteChar": "\"", "doubleQuote": true, "header": true, "lineTerminator": "\n" },
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "title": "CC BY 4.0 for the compilation and the estimate rows; official holiday dates are public facts from State Council notices.",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "sources": [
+        { "title": "国办发明电〔2025〕7号 (2026 holiday arrangements)", "path": "https://www.gov.cn/zhengce/content/202511/content_7047090.htm" },
+        { "title": "全国年节及纪念日放假办法 (as amended from 1 January 2025)", "path": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm" },
+        { "title": "Cambridge China Bridge China holiday calendar (estimates)", "path": "https://camchinabridge.co.uk/tools/china-holiday-calendar/" }
+      ],
+      "schema": {
+        "fields": [
+          { "name": "year", "type": "year", "description": "Calendar year of the holiday arrangement the row belongs to.", "constraints": { "required": true } },
+          {
+            "name": "entry_type",
+            "type": "string",
+            "description": "public_holiday: days off; make_up_workday: a weekend day that offices and most factories work (调休); factory_rush_estimate / factory_closure_estimate: Cambridge China Bridge estimates, not official.",
+            "constraints": { "required": true, "enum": ["public_holiday", "make_up_workday", "factory_rush_estimate", "factory_closure_estimate"] }
+          },
+          {
+            "name": "holiday_key",
+            "type": "string",
+            "description": "Stable identifier of the holiday the row relates to.",
+            "constraints": { "required": true, "enum": ["newYear", "springFestival", "qingming", "labourDay", "dragonBoat", "midAutumn", "nationalDay"] }
+          },
+          { "name": "name_en", "type": "string", "description": "Name in English.", "constraints": { "required": true } },
+          { "name": "name_zh", "type": "string", "description": "Name in Simplified Chinese.", "constraints": { "required": true } },
+          { "name": "start_date", "type": "date", "description": "First day, ISO 8601, China Standard Time calendar date.", "constraints": { "required": true } },
+          { "name": "end_date", "type": "date", "description": "Last day, inclusive.", "constraints": { "required": true } },
+          { "name": "days", "type": "integer", "description": "Calendar days from start_date to end_date, both included.", "constraints": { "required": true } },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "official: from the State Council notice for that year; provisional_statutory: statutory days only, the year's notice not yet published (bridged days and make-up days will be added); estimate: Cambridge China Bridge estimate.",
+            "constraints": { "required": true, "enum": ["official", "provisional_statutory", "estimate"] }
+          },
+          { "name": "source_title", "type": "string", "description": "Document the dates come from.", "constraints": { "required": true } },
+          { "name": "source_url", "type": "string", "format": "uri", "description": "URL of that document.", "constraints": { "required": true } },
+          { "name": "checked_on", "type": "date", "description": "Date Cambridge China Bridge last checked the source.", "constraints": { "required": true } }
+        ]
+      }
+    }
+  ]
+}

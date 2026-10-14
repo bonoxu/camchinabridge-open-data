@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use these data, please cite them as below and keep the HMRC Open Government Licence attribution for Import Pulse figures."
+type: dataset
+title: "Cambridge China Bridge open data: UK-China Import Pulse and China holiday and factory-closure calendar"
+abstract: "A quarterly summary of UK imports from China derived from HMRC Overseas Trade Statistics, and China's public holidays, make-up working days and estimated Chinese New Year factory closures from State Council notices."
+authors:
+  - name: "Cambridge China Bridge (Piggy Pineapple Ltd)"
+    website: "https://camchinabridge.co.uk/"
+    email: "enquiries@camchinabridge.co.uk"
+version: "2026.10"
+date-released: "2026-10-14"
+url: "https://camchinabridge.co.uk/uk-china-import-pulse/"
+license:
+  - CC-BY-4.0
+  - OGL-UK-3.0
+keywords:
+  - UK imports
+  - China
+  - HMRC
+  - overseas trade statistics
+  - Chinese public holidays
+  - Chinese New Year
+  - factory closures
+references:
+  - type: data
+    title: "Overseas Trade Statistics (OTS), UK imports from China"
+    authors:
+      - name: "HM Revenue & Customs"
+    url: "https://www.uktradeinfo.com/"
+    license: OGL-UK-3.0
+    notes: "Contains HMRC data © Crown copyright 2026, licensed under the Open Government Licence v3.0."
+  - type: report
+    title: "国务院办公厅关于2026年部分节假日安排的通知（国办发明电〔2025〕7号）"
+    authors:
+      - name: "General Office of the State Council of the People's Republic of China"
+    url: "https://www.gov.cn/zhengce/content/202511/content_7047090.htm"
+    date-released: "2025-11-04"
+  - type: report
+    title: "国务院关于修改《全国年节及纪念日放假办法》的决定"
+    authors:
+      - name: "State Council of the People's Republic of China"
+    url: "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
