@@ -1,0 +1,94 @@
+# UK-China Export Pulse, Q2 2026 compared with Q2 2025. Source: https://camchinabridge.co.uk/uk-china-export-pulse/
+# Cite as: Cambridge China Bridge, UK-China Export Pulse, with a link to the page above.
+# Contains HMRC overseas trade statistics (UK exports to China), Open Government Licence v3.0.
+section,code,description,period,value_gbp,previous_period,previous_value_gbp,change_pct,gbp_per_kg
+total,,All UK exports to China excluding precious metals (HS 71),Q2 2026,2960465970,Q2 2025,3327276025,-11,
+"precious metals (HS2 71, reported separately)",71,"Natural or cultured pearls, precious or semi-precious stones, precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",Q2 2026,12584623760,Q2 2025,3539018382,255.6,99050.19
+largest chapter (HS2),84,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",Q2 2026,738227964,Q2 2025,684632728,7.8,76.54
+largest chapter (HS2),87,"Vehicles other than railway or tramway rolling-stock, and parts and accessories thereof",Q2 2026,514092713,Q2 2025,688624076,-25.3,30.44
+largest chapter (HS2),74,Copper and articles thereof,Q2 2026,246081429,Q2 2025,182652846,34.7,8.48
+largest chapter (HS2),30,Pharmaceutical products,Q2 2026,214135914,Q2 2025,272426554,-21.4,364.52
+largest chapter (HS2),90,"Optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments and apparatus; parts and accessories thereof",Q2 2026,192973273,Q2 2025,224168159,-13.9,249.48
+largest chapter (HS2),85,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers, television image and sound recorders and reproducers, and parts and accessories of such articles",Q2 2026,176387716,Q2 2025,163882101,7.6,119.39
+largest chapter (HS2),27,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",Q2 2026,128760293,Q2 2025,338843434,-62,0.74
+largest chapter (HS2),39,Plastics and plastic products,Q2 2026,72028375,Q2 2025,74046159,-2.7,9.58
+largest chapter (HS2),22,"Beverages, spirits and vinegar",Q2 2026,58231158,Q2 2025,52472168,11,5.91
+largest chapter (HS2),38,Miscellaneous chemical products,Q2 2026,58074950,Q2 2025,63131683,-8,9.41
+largest chapter (HS2),88,"Aircraft, spacecraft, and parts thereof",Q2 2026,55823629,Q2 2025,60760857,-8.1,251.36
+largest chapter (HS2),02,Meat and edible meat offal,Q2 2026,40852863,Q2 2025,47222536,-13.5,1.19
+fastest-rising heading (HS4),8481,"Taps, cocks, valves and similar appliances for pipes, boiler shells, tanks, vats or the like, incl. pressure-reducing valves and thermostatically controlled valves; parts thereof",Q2 2026,42804679,Q2 2025,30982021,38.2,73.31
+fastest-rising heading (HS4),9013,"Lasers (excl. laser diodes); other optical appliances and instruments, n.e.s. in chapter 90",Q2 2026,18197323,Q2 2025,13306905,36.8,424.72
+fastest-rising heading (HS4),7404,"Waste and scrap, of copper (excl. ingots or other similar unwrought shapes, of remelted copper waste and scrap, ashes and residues containing copper, and waste and scrap of primary cells, primary batteries and electric accumulators)",Q2 2026,243928605,Q2 2025,180897294,34.8,8.43
+fastest-rising heading (HS4),8807,"Parts of aircraft and spacecraft of heading 8801, 8802 or 8806, n.e.s.",Q2 2026,54872339,Q2 2025,41268726,33,258.83
+fastest-rising heading (HS4),3304,"Beauty or make-up preparations and preparations for the care of the skin, incl. sunscreen or suntan preparations (excl. medicaments); manicure or pedicure preparations",Q2 2026,17786164,Q2 2025,13970652,27.3,47.13
+fastest-rising heading (HS4),8411,"Turbojets, turbopropellers and other gas turbines",Q2 2026,452747177,Q2 2025,357224019,26.7,2556.55
+fastest-rising heading (HS4),8537,"Boards, panels, consoles, desks, cabinets and other bases, equipped with two or more apparatus of heading 8535 or 8536, for electric control or the distribution of electricity, incl. those incorporating instruments or apparatus of chapter 90, and num",Q2 2026,21707871,Q2 2025,17153418,26.6,246.17
+fastest-rising heading (HS4),8414,"Air or vacuum pumps (excl. gas compound elevators and pneumatic elevators and conveyors); air or other gas compressors and fans; ventilating or recycling hoods incorporating a fan, whether or not fitted with filters; gas-tight biological safety cabin",Q2 2026,13540805,Q2 2025,10739358,26.1,27.28
+steepest-falling heading (HS4),2709,"Petroleum oils and oils obtained from bituminous minerals, crude",Q2 2026,105314679,Q2 2025,327885476,-67.9,0.75
+steepest-falling heading (HS4),0302,"Fish, fresh or chilled (excl. fish fillets and other fish meat of heading 0304)",Q2 2026,15444673,Q2 2025,40521618,-61.9,7.28
+steepest-falling heading (HS4),8413,"Pumps for liquids, whether or not fitted with a measuring device (excl. ceramic pumps and secretion aspirating pumps for medical use and medical pumps carried on or implanted in the body); liquid elevators (excl. pumps); parts thereof",Q2 2026,17627547,Q2 2025,29926179,-41.1,51.82
+steepest-falling heading (HS4),8486,"Machines and apparatus of a kind used solely or principally for the manufacture of semiconductor boules or wafers, semiconductor devices, electronic integrated circuits or flat panel displays; machines and apparatus specified in note 11 C to chapter",Q2 2026,16265647,Q2 2025,27093316,-40,338.94
+steepest-falling heading (HS4),9012,"Electron microscopes, proton microscopes and diffraction apparatus",Q2 2026,10421338,Q2 2025,16385418,-36.4,220.67
+steepest-falling heading (HS4),8708,"Parts and accessories for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the transport of persons, motor vehicles for the transport of goods and special purpose motor ve",Q2 2026,18686213,Q2 2025,28992542,-35.5,21.97
+steepest-falling heading (HS4),9031,"Measuring or checking instruments, appliances and machines not elsewhere specified in chapter 90; profile projectors",Q2 2026,25721298,Q2 2025,38622589,-33.4,181.51
+steepest-falling heading (HS4),8703,"Motor cars and other motor vehicles principally designed for the transport of <10 persons, incl. station wagons and racing cars (excl. motor vehicles of heading 8702)",Q2 2026,459956831,Q2 2025,649299978,-29.2,29.54
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2019,3432443156,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2019,3913333839,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2019,4637400558,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2019,4306230993,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2020,3060016724,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2020,2671666706,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2020,3293738805,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2020,3612214460,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2021,3717773738,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2021,3382668451,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2021,3407862327,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2021,3582357825,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2022,3182517175,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2022,2982152131,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2022,3421556761,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2022,4094844389,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2023,2896996514,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2023,3392242593,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2023,3134995987,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2023,3550505868,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2024,2987474011,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2024,3569539180,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2024,3376363796,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2024,3462795964,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2025,2952803379,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2025,3327276025,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q3 2025,3086356897,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q4 2025,3204498976,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q1 2026,2501799220,,,,
+quarterly total,,All UK exports to China excluding precious metals (HS 71),Q2 2026,2960465970,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2019,1587934164,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2019,1891409035,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2019,1084288313,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2019,2285045322,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2020,534198663,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2020,290376728,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2020,322817861,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2020,372907773,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2021,155805383,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2021,367017788,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2021,260937476,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2021,193134703,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2022,191721731,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2022,1252087341,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2022,5515263635,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2022,7926734161,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2023,2050642194,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2023,1825472658,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2023,5226359836,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2023,5211245260,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2024,4556856579,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2024,5114520555,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2024,3943414115,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2024,9977827623,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2025,5935333082,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2025,3539018382,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q3 2025,3290168484,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q4 2025,2446682803,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q1 2026,2398189257,,,,
+quarterly precious metals (HS2 71),71,Precious metals and stones,Q2 2026,12584623760,,,,

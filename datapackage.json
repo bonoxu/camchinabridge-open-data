@@ -1,12 +1,25 @@
 {
   "profile": "data-package",
   "name": "camchinabridge-open-data",
-  "title": "Cambridge China Bridge open data: UK-China Import Pulse and China holiday and factory-closure calendar",
-  "description": "Two small datasets published by Cambridge China Bridge for UK importers and researchers: a quarterly summary of UK imports from China derived from HMRC overseas trade statistics, and China's public holidays, make-up working days and estimated Chinese New Year factory closures taken from State Council notices.",
-  "version": "2026.10",
+  "title": "Cambridge China Bridge open data: UK-China Import and Export Pulses, China-EU Trade Pulse and China holiday and factory-closure calendar",
+  "description": "Four small datasets published by Cambridge China Bridge for importers, exporters and researchers: quarterly summaries of UK imports from China and UK exports to China derived from HMRC overseas trade statistics, a quarterly summary of imports from China into each EU member state derived from Eurostat Comext, and China's public holidays, make-up working days and estimated Chinese New Year factory closures taken from State Council notices.",
+  "version": "2026.10.1",
   "created": "2026-10-14T00:00:00Z",
   "homepage": "https://camchinabridge.co.uk/uk-china-import-pulse/",
-  "keywords": ["UK imports", "China", "HMRC", "overseas trade statistics", "Chinese public holidays", "Chinese New Year", "factory closures", "sourcing"],
+  "keywords": [
+    "UK imports",
+    "China",
+    "HMRC",
+    "overseas trade statistics",
+    "UK exports",
+    "EU imports",
+    "Eurostat",
+    "Comext",
+    "Chinese public holidays",
+    "Chinese New Year",
+    "factory closures",
+    "sourcing"
+  ],
   "contributors": [
     {
       "title": "Cambridge China Bridge (Piggy Pineapple Ltd)",
@@ -24,12 +37,25 @@
       "name": "OGL-UK-3.0",
       "title": "Open Government Licence v3.0 (applies to the HMRC-derived figures, Crown copyright)",
       "path": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    },
+    {
+      "name": "Eurostat-reuse",
+      "title": "Eurostat copyright notice: re-use of Eurostat statistical data, for commercial or non-commercial purposes, is authorised provided the source is acknowledged (applies to the Eurostat-derived figures)",
+      "path": "https://ec.europa.eu/eurostat/help/copyright-notice"
     }
   ],
   "sources": [
     {
       "title": "HM Revenue & Customs, Overseas Trade Statistics (OTS), via the uktradeinfo API (api.uktradeinfo.com/OTS): UK imports from China (CountryId 720, non-EU imports)",
       "path": "https://www.uktradeinfo.com/"
+    },
+    {
+      "title": "HM Revenue & Customs, Overseas Trade Statistics (OTS), via the uktradeinfo API (api.uktradeinfo.com/OTS): UK exports to China (CountryId 720, non-EU exports, FlowTypeId 4)",
+      "path": "https://www.uktradeinfo.com/"
+    },
+    {
+      "title": "Eurostat, Comext dataset DS-045409 (EU trade since 1988 by HS2-4-6 and CN8), via the Comext dissemination API: imports (flow 1) from China (partner CN) by reporting member state",
+      "path": "https://ec.europa.eu/eurostat/comext/newxtweb/"
     },
     {
       "title": "国务院办公厅关于2026年部分节假日安排的通知（国办发明电〔2025〕7号）, State Council General Office, 4 November 2025",
@@ -50,7 +76,14 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "dialect": { "delimiter": ",", "quoteChar": "\"", "doubleQuote": true, "header": true, "commentChar": "#", "lineTerminator": "\n" },
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "header": true,
+        "commentChar": "#",
+        "lineTerminator": "\n"
+      },
       "licenses": [
         {
           "name": "OGL-UK-3.0",
@@ -59,7 +92,10 @@
         }
       ],
       "sources": [
-        { "title": "HM Revenue & Customs, Overseas Trade Statistics (uktradeinfo)", "path": "https://www.uktradeinfo.com/" }
+        {
+          "title": "HM Revenue & Customs, Overseas Trade Statistics (uktradeinfo)",
+          "path": "https://www.uktradeinfo.com/"
+        }
       ],
       "schema": {
         "fields": [
@@ -69,17 +105,284 @@
             "description": "Which part of the Pulse the row belongs to.",
             "constraints": {
               "required": true,
-              "enum": ["total", "largest chapter (HS2)", "fastest-rising heading (HS4)", "steepest-falling heading (HS4)", "quarterly total"]
+              "enum": [
+                "total",
+                "largest chapter (HS2)",
+                "fastest-rising heading (HS4)",
+                "steepest-falling heading (HS4)",
+                "quarterly total"
+              ]
             }
           },
-          { "name": "code", "type": "string", "description": "HS2 chapter or HS4 heading code, kept as text so leading zeros survive. Empty for total rows." },
-          { "name": "description", "type": "string", "description": "HMRC commodity description of the chapter or heading, or 'All UK imports from China'.", "constraints": { "required": true } },
-          { "name": "period", "type": "string", "description": "Calendar quarter the value covers, written 'Qn YYYY'.", "constraints": { "required": true, "pattern": "Q[1-4] \\d{4}" } },
-          { "name": "value_gbp", "type": "integer", "description": "Value of UK imports from China in the period, pounds sterling (GBP), current prices.", "constraints": { "required": true } },
-          { "name": "previous_period", "type": "string", "description": "Comparison quarter (same quarter a year earlier). Empty for quarterly total rows." },
-          { "name": "previous_value_gbp", "type": "integer", "description": "Value in the comparison quarter, GBP. Empty for quarterly total rows." },
-          { "name": "change_pct", "type": "number", "description": "Percentage change from previous_value_gbp to value_gbp (rounded by the source script). Empty for quarterly total rows." },
-          { "name": "gbp_per_kg", "type": "number", "description": "Value density: value_gbp divided by net mass in kg for the period, GBP per kg. Empty where not computed (totals, or where HMRC gives no mass)." }
+          {
+            "name": "code",
+            "type": "string",
+            "description": "HS2 chapter or HS4 heading code, kept as text so leading zeros survive. Empty for total rows."
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "HMRC commodity description of the chapter or heading, or 'All UK imports from China'.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "period",
+            "type": "string",
+            "description": "Calendar quarter the value covers, written 'Qn YYYY'.",
+            "constraints": {
+              "required": true,
+              "pattern": "Q[1-4] \\d{4}"
+            }
+          },
+          {
+            "name": "value_gbp",
+            "type": "integer",
+            "description": "Value of UK imports from China in the period, pounds sterling (GBP), current prices.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "previous_period",
+            "type": "string",
+            "description": "Comparison quarter (same quarter a year earlier). Empty for quarterly total rows."
+          },
+          {
+            "name": "previous_value_gbp",
+            "type": "integer",
+            "description": "Value in the comparison quarter, GBP. Empty for quarterly total rows."
+          },
+          {
+            "name": "change_pct",
+            "type": "number",
+            "description": "Percentage change from previous_value_gbp to value_gbp (rounded by the source script). Empty for quarterly total rows."
+          },
+          {
+            "name": "gbp_per_kg",
+            "type": "number",
+            "description": "Value density: value_gbp divided by net mass in kg for the period, GBP per kg. Empty where not computed (totals, or where HMRC gives no mass)."
+          }
+        ]
+      }
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "uk-china-export-pulse",
+      "title": "UK-China Export Pulse",
+      "description": "UK exports to China for the latest calendar quarter HMRC has fully published, compared with the same quarter a year earlier: the headline total excluding precious metals (HS chapter 71, mostly non-monetary gold, reported in its own rows because its swings would otherwise decide the headline), the 12 largest HS2 chapters, the 8 fastest-rising and 8 steepest-falling HS4 headings (under GBP 10m in either quarter left out), and quarterly totals and precious-metal totals from Q1 2019. Chapter 99 is excluded. Values are current-price pounds sterling as published by HMRC and may be revised. The file begins with three '#' comment lines; it is byte-identical to https://camchinabridge.co.uk/uk-china-export-pulse.csv.",
+      "path": "data/uk-china-export-pulse.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "header": true,
+        "commentChar": "#",
+        "lineTerminator": "\n"
+      },
+      "licenses": [
+        {
+          "name": "OGL-UK-3.0",
+          "title": "Open Government Licence v3.0. Contains HMRC data © Crown copyright.",
+          "path": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "HM Revenue & Customs, Overseas Trade Statistics (uktradeinfo)",
+          "path": "https://www.uktradeinfo.com/"
+        }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Which part of the Pulse the row belongs to.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "total",
+                "precious metals (HS2 71, reported separately)",
+                "largest chapter (HS2)",
+                "fastest-rising heading (HS4)",
+                "steepest-falling heading (HS4)",
+                "quarterly total",
+                "quarterly precious metals (HS2 71)"
+              ]
+            }
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "HS2 chapter or HS4 heading code, kept as text so leading zeros survive. Empty for total rows."
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "HMRC commodity description of the chapter or heading, or the total's label.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "period",
+            "type": "string",
+            "description": "Calendar quarter the value covers, written 'Qn YYYY'.",
+            "constraints": {
+              "required": true,
+              "pattern": "Q[1-4] \\d{4}"
+            }
+          },
+          {
+            "name": "value_gbp",
+            "type": "integer",
+            "description": "Value of UK exports to China in the period, pounds sterling (GBP), current prices.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "previous_period",
+            "type": "string",
+            "description": "Comparison quarter (same quarter a year earlier). Empty for quarterly rows."
+          },
+          {
+            "name": "previous_value_gbp",
+            "type": "integer",
+            "description": "Value in the comparison quarter, GBP. Empty for quarterly rows."
+          },
+          {
+            "name": "change_pct",
+            "type": "number",
+            "description": "Percentage change from previous_value_gbp to value_gbp, 1 decimal place. Empty for quarterly rows."
+          },
+          {
+            "name": "gbp_per_kg",
+            "type": "number",
+            "description": "Value density: value_gbp divided by net mass in kg, GBP per kg. Empty for totals or where HMRC gives no mass."
+          }
+        ]
+      }
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "china-eu-trade-pulse",
+      "title": "China-EU Trade Pulse (every member state with a page)",
+      "description": "Imports from China into each EU member state with a page at https://camchinabridge.co.uk/china-eu-trade-pulse/, one block of rows per country (country_code column): the latest calendar quarter Eurostat has fully published against the same quarter a year earlier, the headline total, the 12 largest HS2 chapters, the 8 fastest-rising and 8 steepest-falling HS4 headings (a heading must reach 0.25% of the country's quarter total, between EUR 1m and EUR 10m, in both quarters), and quarterly totals from Q1 2019. Chapters 99 and 00 are excluded. Values are euros as published by Eurostat, monthly data summed to quarters by Cambridge China Bridge, and may be revised. Member states whose series is too sparse are not included. The file begins with four '#' comment lines carrying the source, citation and the Eurostat acknowledgement; it is byte-identical to https://camchinabridge.co.uk/china-eu-trade-pulse.csv.",
+      "path": "data/china-eu-trade-pulse.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "header": true,
+        "commentChar": "#",
+        "lineTerminator": "\n"
+      },
+      "licenses": [
+        {
+          "name": "Eurostat-reuse",
+          "title": "Source: Eurostat. Re-use authorised provided the source is acknowledged; figures aggregated and calculated from Eurostat monthly data by Cambridge China Bridge.",
+          "path": "https://ec.europa.eu/eurostat/help/copyright-notice"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Eurostat, Comext DS-045409",
+          "path": "https://ec.europa.eu/eurostat/comext/newxtweb/"
+        }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "country_code",
+            "type": "string",
+            "description": "Eurostat Comext reporter code of the importing member state (ISO 3166-1 alpha-2, except Greece, which Comext codes GR).",
+            "constraints": {
+              "required": true,
+              "pattern": "[A-Z]{2}"
+            }
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Member state name in English.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "section",
+            "type": "string",
+            "description": "Which part of the country's Pulse the row belongs to.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "total",
+                "largest chapter (HS2)",
+                "fastest-rising heading (HS4)",
+                "steepest-falling heading (HS4)",
+                "quarterly total"
+              ]
+            }
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "HS2 chapter or HS4 heading code, kept as text so leading zeros survive. Empty for total rows."
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "Eurostat product label of the chapter or heading (chapter labels changed from upper case to sentence case), or the total's label.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "period",
+            "type": "string",
+            "description": "Calendar quarter the value covers, written 'Qn YYYY'.",
+            "constraints": {
+              "required": true,
+              "pattern": "Q[1-4] \\d{4}"
+            }
+          },
+          {
+            "name": "value_eur",
+            "type": "integer",
+            "description": "Value of imports from China in the period, euros, current prices.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "previous_period",
+            "type": "string",
+            "description": "Comparison quarter (same quarter a year earlier). Empty for quarterly totals."
+          },
+          {
+            "name": "previous_value_eur",
+            "type": "integer",
+            "description": "Value in the comparison quarter, EUR. Empty for quarterly totals."
+          },
+          {
+            "name": "change_pct",
+            "type": "number",
+            "description": "Percentage change from previous_value_eur to value_eur, 1 decimal place. Empty for quarterly totals."
+          },
+          {
+            "name": "eur_per_kg",
+            "type": "number",
+            "description": "Value density: value_eur divided by net mass in kg, EUR per kg. Empty for totals or where Eurostat gives no mass."
+          }
         ]
       }
     },
@@ -92,7 +395,13 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "dialect": { "delimiter": ",", "quoteChar": "\"", "doubleQuote": true, "header": true, "lineTerminator": "\n" },
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\"",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\n"
+      },
       "licenses": [
         {
           "name": "CC-BY-4.0",
@@ -101,39 +410,138 @@
         }
       ],
       "sources": [
-        { "title": "国办发明电〔2025〕7号 (2026 holiday arrangements)", "path": "https://www.gov.cn/zhengce/content/202511/content_7047090.htm" },
-        { "title": "全国年节及纪念日放假办法 (as amended from 1 January 2025)", "path": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm" },
-        { "title": "Cambridge China Bridge China holiday calendar (estimates)", "path": "https://camchinabridge.co.uk/tools/china-holiday-calendar/" }
+        {
+          "title": "国办发明电〔2025〕7号 (2026 holiday arrangements)",
+          "path": "https://www.gov.cn/zhengce/content/202511/content_7047090.htm"
+        },
+        {
+          "title": "全国年节及纪念日放假办法 (as amended from 1 January 2025)",
+          "path": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+        },
+        {
+          "title": "Cambridge China Bridge China holiday calendar (estimates)",
+          "path": "https://camchinabridge.co.uk/tools/china-holiday-calendar/"
+        }
       ],
       "schema": {
         "fields": [
-          { "name": "year", "type": "year", "description": "Calendar year of the holiday arrangement the row belongs to.", "constraints": { "required": true } },
+          {
+            "name": "year",
+            "type": "year",
+            "description": "Calendar year of the holiday arrangement the row belongs to.",
+            "constraints": {
+              "required": true
+            }
+          },
           {
             "name": "entry_type",
             "type": "string",
             "description": "public_holiday: days off; make_up_workday: a weekend day that offices and most factories work (调休); factory_rush_estimate / factory_closure_estimate: Cambridge China Bridge estimates, not official.",
-            "constraints": { "required": true, "enum": ["public_holiday", "make_up_workday", "factory_rush_estimate", "factory_closure_estimate"] }
+            "constraints": {
+              "required": true,
+              "enum": [
+                "public_holiday",
+                "make_up_workday",
+                "factory_rush_estimate",
+                "factory_closure_estimate"
+              ]
+            }
           },
           {
             "name": "holiday_key",
             "type": "string",
             "description": "Stable identifier of the holiday the row relates to.",
-            "constraints": { "required": true, "enum": ["newYear", "springFestival", "qingming", "labourDay", "dragonBoat", "midAutumn", "nationalDay"] }
+            "constraints": {
+              "required": true,
+              "enum": [
+                "newYear",
+                "springFestival",
+                "qingming",
+                "labourDay",
+                "dragonBoat",
+                "midAutumn",
+                "nationalDay"
+              ]
+            }
           },
-          { "name": "name_en", "type": "string", "description": "Name in English.", "constraints": { "required": true } },
-          { "name": "name_zh", "type": "string", "description": "Name in Simplified Chinese.", "constraints": { "required": true } },
-          { "name": "start_date", "type": "date", "description": "First day, ISO 8601, China Standard Time calendar date.", "constraints": { "required": true } },
-          { "name": "end_date", "type": "date", "description": "Last day, inclusive.", "constraints": { "required": true } },
-          { "name": "days", "type": "integer", "description": "Calendar days from start_date to end_date, both included.", "constraints": { "required": true } },
+          {
+            "name": "name_en",
+            "type": "string",
+            "description": "Name in English.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "name_zh",
+            "type": "string",
+            "description": "Name in Simplified Chinese.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "start_date",
+            "type": "date",
+            "description": "First day, ISO 8601, China Standard Time calendar date.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "end_date",
+            "type": "date",
+            "description": "Last day, inclusive.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "days",
+            "type": "integer",
+            "description": "Calendar days from start_date to end_date, both included.",
+            "constraints": {
+              "required": true
+            }
+          },
           {
             "name": "status",
             "type": "string",
             "description": "official: from the State Council notice for that year; provisional_statutory: statutory days only, the year's notice not yet published (bridged days and make-up days will be added); estimate: Cambridge China Bridge estimate.",
-            "constraints": { "required": true, "enum": ["official", "provisional_statutory", "estimate"] }
+            "constraints": {
+              "required": true,
+              "enum": [
+                "official",
+                "provisional_statutory",
+                "estimate"
+              ]
+            }
           },
-          { "name": "source_title", "type": "string", "description": "Document the dates come from.", "constraints": { "required": true } },
-          { "name": "source_url", "type": "string", "format": "uri", "description": "URL of that document.", "constraints": { "required": true } },
-          { "name": "checked_on", "type": "date", "description": "Date Cambridge China Bridge last checked the source.", "constraints": { "required": true } }
+          {
+            "name": "source_title",
+            "type": "string",
+            "description": "Document the dates come from.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "format": "uri",
+            "description": "URL of that document.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "checked_on",
+            "type": "date",
+            "description": "Date Cambridge China Bridge last checked the source.",
+            "constraints": {
+              "required": true
+            }
+          }
         ]
       }
     }

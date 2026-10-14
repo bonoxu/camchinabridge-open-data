@@ -1,13 +1,13 @@
 cff-version: 1.2.0
-message: "If you use these data, please cite them as below and keep the HMRC Open Government Licence attribution for Import Pulse figures."
+message: "If you use these data, please cite them as below, keep the HMRC Open Government Licence attribution for Import and Export Pulse figures, and acknowledge Eurostat as the source of China-EU Trade Pulse figures."
 type: dataset
-title: "Cambridge China Bridge open data: UK-China Import Pulse and China holiday and factory-closure calendar"
-abstract: "A quarterly summary of UK imports from China derived from HMRC Overseas Trade Statistics, and China's public holidays, make-up working days and estimated Chinese New Year factory closures from State Council notices."
+title: "Cambridge China Bridge open data: UK-China Import and Export Pulses, China-EU Trade Pulse and China holiday and factory-closure calendar"
+abstract: "Quarterly summaries of UK imports from China and UK exports to China derived from HMRC Overseas Trade Statistics, a quarterly summary of imports from China into each EU member state derived from Eurostat Comext, and China's public holidays, make-up working days and estimated Chinese New Year factory closures from State Council notices."
 authors:
   - name: "Cambridge China Bridge (Piggy Pineapple Ltd)"
     website: "https://camchinabridge.co.uk/"
     email: "enquiries@camchinabridge.co.uk"
-version: "2026.10"
+version: "2026.10.1"
 date-released: "2026-10-14"
 url: "https://camchinabridge.co.uk/uk-china-import-pulse/"
 license:
@@ -15,6 +15,9 @@ license:
   - OGL-UK-3.0
 keywords:
   - UK imports
+  - UK exports
+  - EU imports
+  - Eurostat
   - China
   - HMRC
   - overseas trade statistics
@@ -29,6 +32,19 @@ references:
     url: "https://www.uktradeinfo.com/"
     license: OGL-UK-3.0
     notes: "Contains HMRC data © Crown copyright 2026, licensed under the Open Government Licence v3.0."
+  - type: data
+    title: "Overseas Trade Statistics (OTS), UK exports to China"
+    authors:
+      - name: "HM Revenue & Customs"
+    url: "https://www.uktradeinfo.com/"
+    license: OGL-UK-3.0
+    notes: "Contains HMRC data © Crown copyright 2026, licensed under the Open Government Licence v3.0."
+  - type: data
+    title: "Comext, DS-045409: EU trade since 1988 by HS2-4-6 and CN8 (imports from China by member state)"
+    authors:
+      - name: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/comext/newxtweb/"
+    notes: "Source: Eurostat. Re-use authorised provided the source is acknowledged (https://ec.europa.eu/eurostat/help/copyright-notice). Quarterly totals, changes and value per kg calculated by Cambridge China Bridge."
   - type: report
     title: "国务院办公厅关于2026年部分节假日安排的通知（国办发明电〔2025〕7号）"
     authors:

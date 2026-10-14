@@ -1,7 +1,7 @@
 Cambridge China Bridge open data: licence terms
 ================================================
 
-This repository contains material under three different positions. Please read
+This repository contains material under four different positions. Please read
 which applies to what you reuse.
 
 1. Our compilation: Creative Commons Attribution 4.0 International (CC BY 4.0)
@@ -21,17 +21,19 @@ The following are licensed under CC BY 4.0
   - the documentation (README.md, this file, CITATION.cff) and any scripts.
 
 Attribution: "Cambridge China Bridge", with a link to
-https://camchinabridge.co.uk/uk-china-import-pulse/ or
+https://camchinabridge.co.uk/uk-china-import-pulse/,
+https://camchinabridge.co.uk/uk-china-export-pulse/,
+https://camchinabridge.co.uk/china-eu-trade-pulse/ or
 https://camchinabridge.co.uk/tools/china-holiday-calendar/ as relevant.
 
 This licence covers only rights Piggy Pineapple Ltd holds. It does not
-relicense the third-party material in sections 2 and 3.
+relicense the third-party material in sections 2, 3 and 4.
 
 2. HMRC figures: Crown copyright, Open Government Licence v3.0
 --------------------------------------------------------------
 
 The trade values, masses and commodity descriptions in
-data/uk-china-import-pulse.csv, and the figures we derived from them (totals,
+data/uk-china-import-pulse.csv and data/uk-china-export-pulse.csv, and the figures we derived from them (totals,
 percentage changes, GBP per kg), come from HM Revenue & Customs Overseas Trade
 Statistics (https://www.uktradeinfo.com/). They are Crown copyright and are
 used and may be reused under the Open Government Licence v3.0:
@@ -46,7 +48,27 @@ As the OGL requires, reuse must not suggest that HMRC or the Crown endorses
 Cambridge China Bridge, you, or your use of the information. The OGL does not
 grant rights in HMRC's logos or other marks.
 
-3. Official Chinese holiday dates: public facts
+3. Eurostat figures: re-use with acknowledgement of the source
+-------------------------------------------------------------
+
+The trade values, masses and product labels in data/china-eu-trade-pulse.csv
+come from Eurostat's Comext database (dataset DS-045409, imports from China by
+EU member state, https://ec.europa.eu/eurostat/comext/newxtweb/). Eurostat's
+copyright notice (https://ec.europa.eu/eurostat/help/copyright-notice) states:
+"Reuse of statistical data, metadata, publications, and other dissemination
+tools published on this website for commercial or non-commercial purposes is
+authorised provided the source is acknowledged." The European Commission's
+reuse policy is implemented by the Commission Decision of 12 December 2011.
+
+Acknowledgement: "Source: Eurostat."
+
+Modifications, stated as the notice requires: Cambridge China Bridge summed
+Eurostat's monthly figures into calendar quarters, calculated year-on-year
+changes, rankings and value per kg, selected the rows shown, and changed
+chapter labels from upper case to sentence case. Eurostat is not responsible
+for these figures or for any use made of them.
+
+4. Official Chinese holiday dates: public facts
 -----------------------------------------------
 
 The holiday periods and make-up working days with status "official" or
@@ -61,7 +83,7 @@ No warranty
 -----------
 
 The data are provided "as is", without warranty of any kind. HMRC revises
-recent figures, and Chinese holiday arrangements are confirmed only by each
+and Eurostat revise recent figures, and Chinese holiday arrangements are confirmed only by each
 year's notice. Check the official sources before relying on a figure or a
 date for a contract, a quotation or a shipment. Piggy Pineapple Ltd is not
 liable for any loss arising from use of the data, to the extent the law
